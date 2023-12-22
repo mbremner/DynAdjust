@@ -89,6 +89,9 @@ const UINT16 WGS84_i =				4979;		// LatLonEht ensemble
 const UINT16 WGS84_i_xyz =			4978;		// XYZ ensemble
 const UINT16 WGS84_ensemble_i =		6326;		// WGS84 ensemble
 
+const UINT16 NAD83_CSRS_i = 	4955; //LatLonEht
+const UINT16 NAD83_CSRS_i_xyz = 4954; // XYZ
+
 
 const char* const AGD66_c =			"4202";
 const char* const AGD84_c =			"4203";
@@ -126,6 +129,10 @@ const char* const WGS84_G1674_c =	"7662";
 const char* const WGS84_G1762_c =	"7664";
 const char* const WGS84_G2139_c =	"9753";
 
+// epsg strings for NAD83 provide XYZ definition only
+const char* const NAD83_CSRS_c =	"4954";
+
+
 const char* const AGD66_epoch =		"1.1.1966";
 const char* const AGD84_epoch =		"1.1.1984";
 const char* const GDA94_epoch =		"1.1.1994";
@@ -155,6 +162,8 @@ const char* const WGS84_G1150_epoch =	"20.01.2002";
 const char* const WGS84_G1674_epoch =	"07.05.2012";
 const char* const WGS84_G1762_epoch =	"16.10.2013";
 const char* const WGS84_G2139_epoch =	"03.01.2021";
+
+const char* const NAD83_CSRS_epoch = "01.01.2010";
 
 const char* const AGD66_s =			"AGD66";
 const char* const AGD84_s =			"AGD84";
@@ -204,5 +213,10 @@ const char* const WGS84_G1762_alias_s =		"WGS 84 (G1762)";
 const char* const WGS84_G2139_s =			"WGS84 (G2139)";
 const char* const WGS84_G2139_alias_s =		"WGS 84 (G2139)";
 
+// NAD83(CSRS)
+const char* const NAD83_CSRS_s =			"NAD83 (CSRS)";
+const char* const NAD83_CSRS_alias_s = 		"NAD 83 (CSRS)";
+const char* const NAD83_CSRS_brief_s =		"NAD83";
+const char* const NAD83_CSRS_brief_alias_s ="NAD83(CSRS)";
 
 #endif  // DNACONSTS_DATUMS_HPP

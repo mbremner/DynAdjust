@@ -182,7 +182,13 @@ U epsgCodeFromName(const S& datumName)
 	if (iequals(datumName, WGS84_G2139_s) ||
 		iequals(datumName, WGS84_G2139_alias_s))
 		return WGS84_G2139_i_xyz;
-	
+	// NAD83
+	if (iequals(datumName, NAD83_CSRS_s) ||
+		iequals(datumName, NAD83_CSRS_alias_s) ||
+		iequals(datumName, NAD83_CSRS_brief_s) ||
+		iequals(datumName, NAD83_CSRS_brief_alias_s))
+		return NAD83_CSRS_i_xyz;
+
 	stringstream ss;
 	ss << "epsgCodeFromName: " << datumName << " is not a supported reference frame label." << endl;
 	throw boost::enable_current_exception(runtime_error(ss.str()));
@@ -280,6 +286,9 @@ S epsgStringFromName(const S& datumName)
 	case WGS84_G2139_i:
 	case WGS84_G2139_i_xyz:
 		return WGS84_G2139_c;
+	case NAD83_CSRS_i:
+	case NAD83_CSRS_i_xyz:
+		return NAD83_CSRS_c;
 	}
 
 	stringstream ss;
@@ -310,6 +319,9 @@ bool isEpsgDatumStatic(const U& epsgCode)
 	case WGS84_i_xyz:
 	case WGS84_i:
 	case WGS84_ensemble_i:
+	// NAD83
+	case NAD83_CSRS_i:
+	case NAD83_CSRS_i_xyz:
 		return true;
 	// ITRF....
 	case ITRF1988_i_xyz:
@@ -421,6 +433,10 @@ void spheroidFromEpsgCode(const U& epsgCode, epsg_spheroid& ellipsoid)
 	case ITRF2014_i:
 	case ITRF2020_i_xyz:
 	case ITRF2020_i:
+	// NAD83
+	case NAD83_CSRS_i_xyz:
+	case NAD83_CSRS_i:
+
 		// authority
 		ellipsoid.authority_.first = "EPSG";
 		ellipsoid.authority_.second = "7019";
@@ -550,6 +566,10 @@ string referenceepochFromEpsgCode(const U& epsgCode)
 	case WGS84_G2139_i_xyz:
 	case WGS84_G2139_i:
 		return WGS84_G2139_epoch;
+		// NAD83
+	case NAD83_CSRS_i_xyz:
+	case NAD83_CSRS_i:
+		return NAD83_CSRS_epoch;
 	default:
 		stringstream ss;
 		ss << "referenceepochFromEpsgCode: EPSG code " << epsgCode << " is not a supported EPSG code." << endl;
@@ -649,6 +669,9 @@ S datumFromEpsgCode(const U& epsgCode)
 	case WGS84_G2139_i_xyz:
 	case WGS84_G2139_i:
 		return WGS84_G2139_s;
+	case NAD83_CSRS_i_xyz:
+	case NAD83_CSRS_i:
+		return NAD83_CSRS_s;
 	default:
 		stringstream ss;
 		ss << "datumFromEpsgCode: EPSG code " << epsgCode << " is not a supported EPSG code." << endl;
@@ -741,6 +764,9 @@ bool validateEpsgCode(const U& epsgCode)
 	case WGS84_G1762_i:
 	case WGS84_G2139_i_xyz:
 	case WGS84_G2139_i:
+	// NAD83
+	case NAD83_CSRS_i_xyz:
+	case NAD83_CSRS_i:
 		return true;
 	default:
 		stringstream ss;
