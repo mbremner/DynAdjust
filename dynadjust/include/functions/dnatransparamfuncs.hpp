@@ -184,7 +184,18 @@ void determineGDA94Parameters(transformation_parameter_set& tParam)
 	// GDA94-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
-
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 	default:
 		throw std::runtime_error("determineGDA94Parameters: ");
 	}
@@ -323,6 +334,18 @@ void determineGDA2020Parameters(transformation_parameter_set& tParam)
 	// GDA2020-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 	default:
 		throw std::runtime_error("determineGDA2020Parameters: ");
 	}
@@ -421,6 +444,18 @@ void determineITRF1988Parameters(transformation_parameter_set& tParam)
 	// ITRF1988-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tparam.parameters_, nad83_itrf1988<double, uint32>::transformationparameters, sizeof(double) * 14);
 		//tparam.reference_epoch_ = nad83_itrf1988<double, uint32>::reference_epoch;
 		//tparam.reference_frame_ = nad83_itrf1988<double, uint32>::reference_frame;
@@ -541,6 +576,18 @@ void determineITRF1989Parameters(transformation_parameter_set& tParam)
 	// ITRF1989-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1989<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1989<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1989<double, UINT32>::reference_frame;
@@ -661,6 +708,18 @@ void determineITRF1990Parameters(transformation_parameter_set& tParam)
 	// ITRF1990-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1990<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1990<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1990<double, UINT32>::reference_frame;
@@ -781,6 +840,18 @@ void determineITRF1991Parameters(transformation_parameter_set& tParam)
 	// ITRF1991-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1991<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1991<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1991<double, UINT32>::reference_frame;
@@ -901,6 +972,18 @@ void determineITRF1992Parameters(transformation_parameter_set& tParam)
 	// ITRF1992-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1992<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1992<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1992<double, UINT32>::reference_frame;
@@ -1021,6 +1104,18 @@ void determineITRF1993Parameters(transformation_parameter_set& tParam)
 	// ITRF1993-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1993<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1993<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1993<double, UINT32>::reference_frame;
@@ -1141,6 +1236,18 @@ void determineITRF1994Parameters(transformation_parameter_set& tParam)
 	// ITRF1994-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1994<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1994<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1994<double, UINT32>::reference_frame;
@@ -1269,6 +1376,18 @@ void determineITRF1996Parameters(transformation_parameter_set& tParam)
 	// ITRF1996-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1996<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1996<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1996<double, UINT32>::reference_frame;
@@ -1397,6 +1516,18 @@ void determineITRF1997Parameters(transformation_parameter_set& tParam)
 	// ITRF1997-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF1997<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF1997<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF1997<double, UINT32>::reference_frame;
@@ -1558,6 +1689,18 @@ void determineITRF2000Parameters(transformation_parameter_set& tParam)
 	// ITRF2000-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF2000<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF2000<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF2000<double, UINT32>::reference_frame;
@@ -1684,6 +1827,18 @@ void determineITRF2005Parameters(transformation_parameter_set& tParam)
 	// ITRF2005-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF2005<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF2005<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF2005<double, UINT32>::reference_frame;
@@ -1841,6 +1996,18 @@ void determineITRF2008Parameters(transformation_parameter_set& tParam)
 	// ITRF2008-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF2008<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF2008<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF2008<double, UINT32>::reference_frame;
@@ -1997,6 +2164,18 @@ void determineITRF2014Parameters(transformation_parameter_set& tParam)
 	// ITRF2014-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF2014<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF2014<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF2014<double, UINT32>::reference_frame;
@@ -2150,6 +2329,18 @@ void determineITRF2020Parameters(transformation_parameter_set& tParam)
 	// ITRF2020-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		//memcpy(&tParam.parameters_, NAD83_ITRF2020<double, UINT32>::transformationParameters, sizeof(double) * 14);
 		//tParam.reference_epoch_ = NAD83_ITRF2020<double, UINT32>::reference_epoch;
 		//tParam.reference_frame_ = NAD83_ITRF2020<double, UINT32>::reference_frame;
@@ -2189,6 +2380,18 @@ void determineNAD83Parameters(transformation_parameter_set& tParam)
 	// NAD83(CSRS)-to-NAD83(CSRS)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		// not a transformation of frame, but a shift in epoch only
 		// Not defined yet - requires interpolation from the ITRF2014 velocity model
 		throw RefTranException("A transformation between different epochs on the same frame is required.",
@@ -2456,6 +2659,18 @@ void determineHelmertParameters(transformation_parameter_set& tParam)
 		// NAD83	
 		case NAD83_CSRS_i_xyz:
 		case NAD83_CSRS_i:
+		case NAD83_CSRS_V2_i_xyz:
+		case NAD83_CSRS_V2_i:
+		case NAD83_CSRS_V3_i_xyz:
+		case NAD83_CSRS_V3_i:
+		case NAD83_CSRS_V4_i_xyz:
+		case NAD83_CSRS_V4_i:
+		case NAD83_CSRS_V5_i_xyz:
+		case NAD83_CSRS_V5_i:
+		case NAD83_CSRS_V6_i_xyz:
+		case NAD83_CSRS_V6_i:
+		case NAD83_CSRS_V7_i_xyz:
+		case NAD83_CSRS_V7_i:
 			determineNAD83Parameters<U>(tParam);
 			break;
 		// WGS84
