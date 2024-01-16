@@ -184,10 +184,38 @@ U epsgCodeFromName(const S& datumName)
 		return WGS84_G2139_i_xyz;
 	// NAD83
 	if (iequals(datumName, NAD83_CSRS_s) ||
-		iequals(datumName, NAD83_CSRS_alias_s) ||
-		iequals(datumName, NAD83_CSRS_brief_s) ||
-		iequals(datumName, NAD83_CSRS_brief_alias_s))
+		iequals(datumName, NAD83_CSRS_alias_s))
 		return NAD83_CSRS_i_xyz;
+	if (iequals(datumName, NAD83_CSRS_V2_s) ||
+		iequals(datumName, NAD83_CSRS_V2_alias1_s) ||
+		iequals(datumName, NAD83_CSRS_V2_alias2_s) ||
+		iequals(datumName, NAD83_CSRS_V2_alias3_s))
+		return NAD83_CSRS_V2_i_xyz;
+	if (iequals(datumName, NAD83_CSRS_V3_s) ||
+		iequals(datumName, NAD83_CSRS_V3_alias1_s) ||
+		iequals(datumName, NAD83_CSRS_V3_alias2_s) ||
+		iequals(datumName, NAD83_CSRS_V3_alias3_s))
+		return NAD83_CSRS_V3_i_xyz;
+	if (iequals(datumName, NAD83_CSRS_V4_s) ||
+		iequals(datumName, NAD83_CSRS_V4_alias1_s) ||
+		iequals(datumName, NAD83_CSRS_V4_alias2_s) ||
+		iequals(datumName, NAD83_CSRS_V4_alias3_s))
+		return NAD83_CSRS_V4_i_xyz;
+	if (iequals(datumName, NAD83_CSRS_V5_s) ||
+		iequals(datumName, NAD83_CSRS_V5_alias1_s) ||
+		iequals(datumName, NAD83_CSRS_V5_alias2_s) ||
+		iequals(datumName, NAD83_CSRS_V5_alias3_s))
+		return NAD83_CSRS_V5_i_xyz;
+	if (iequals(datumName, NAD83_CSRS_V6_s) ||
+		iequals(datumName, NAD83_CSRS_V6_alias1_s) ||
+		iequals(datumName, NAD83_CSRS_V6_alias2_s) ||
+		iequals(datumName, NAD83_CSRS_V6_alias3_s))
+		return NAD83_CSRS_V6_i_xyz;
+	if (iequals(datumName, NAD83_CSRS_V7_s) ||
+		iequals(datumName, NAD83_CSRS_V7_alias1_s) ||
+		iequals(datumName, NAD83_CSRS_V7_alias2_s) ||
+		iequals(datumName, NAD83_CSRS_V7_alias3_s))
+		return NAD83_CSRS_V7_i_xyz;
 
 	stringstream ss;
 	ss << "epsgCodeFromName: " << datumName << " is not a supported reference frame label." << endl;
@@ -286,9 +314,28 @@ S epsgStringFromName(const S& datumName)
 	case WGS84_G2139_i:
 	case WGS84_G2139_i_xyz:
 		return WGS84_G2139_c;
+	// NAD83
 	case NAD83_CSRS_i:
 	case NAD83_CSRS_i_xyz:
 		return NAD83_CSRS_c;
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V2_i_xyz:
+		return NAD83_CSRS_v2_c;
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V3_i_xyz:
+		return NAD83_CSRS_v3_c;
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V4_i_xyz:
+		return NAD83_CSRS_v4_c;
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V5_i_xyz:
+		return NAD83_CSRS_v5_c;
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V6_i_xyz:
+		return NAD83_CSRS_v6_c;
+	case NAD83_CSRS_V7_i:
+	case NAD83_CSRS_V7_i_xyz:
+		return NAD83_CSRS_v7_c;
 	}
 
 	stringstream ss;
@@ -322,6 +369,18 @@ bool isEpsgDatumStatic(const U& epsgCode)
 	// NAD83
 	case NAD83_CSRS_i:
 	case NAD83_CSRS_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V7_i:
+	case NAD83_CSRS_V7_i_xyz:
 		return true;
 	// ITRF....
 	case ITRF1988_i_xyz:
@@ -436,7 +495,18 @@ void spheroidFromEpsgCode(const U& epsgCode, epsg_spheroid& ellipsoid)
 	// NAD83
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
-
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		// authority
 		ellipsoid.authority_.first = "EPSG";
 		ellipsoid.authority_.second = "7019";
@@ -570,6 +640,24 @@ string referenceepochFromEpsgCode(const U& epsgCode)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
 		return NAD83_CSRS_epoch;
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+		return NAD83_CSRS_V2_epoch;
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+		return NAD83_CSRS_V3_epoch;
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+		return NAD83_CSRS_V4_epoch;
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+		return NAD83_CSRS_V5_epoch;
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+		return NAD83_CSRS_V6_epoch;
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
+		return NAD83_CSRS_V7_epoch;
 	default:
 		stringstream ss;
 		ss << "referenceepochFromEpsgCode: EPSG code " << epsgCode << " is not a supported EPSG code." << endl;
@@ -672,6 +760,24 @@ S datumFromEpsgCode(const U& epsgCode)
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
 		return NAD83_CSRS_s;
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+		return NAD83_CSRS_V2_s;
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+		return NAD83_CSRS_V3_s;
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+		return NAD83_CSRS_V4_s;
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+		return NAD83_CSRS_V5_s;
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+		return NAD83_CSRS_V6_s;
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
+		return NAD83_CSRS_V7_s;
 	default:
 		stringstream ss;
 		ss << "datumFromEpsgCode: EPSG code " << epsgCode << " is not a supported EPSG code." << endl;
@@ -767,6 +873,18 @@ bool validateEpsgCode(const U& epsgCode)
 	// NAD83
 	case NAD83_CSRS_i_xyz:
 	case NAD83_CSRS_i:
+	case NAD83_CSRS_V2_i_xyz:
+	case NAD83_CSRS_V2_i:
+	case NAD83_CSRS_V3_i_xyz:
+	case NAD83_CSRS_V3_i:
+	case NAD83_CSRS_V4_i_xyz:
+	case NAD83_CSRS_V4_i:
+	case NAD83_CSRS_V5_i_xyz:
+	case NAD83_CSRS_V5_i:
+	case NAD83_CSRS_V6_i_xyz:
+	case NAD83_CSRS_V6_i:
+	case NAD83_CSRS_V7_i_xyz:
+	case NAD83_CSRS_V7_i:
 		return true;
 	default:
 		stringstream ss;

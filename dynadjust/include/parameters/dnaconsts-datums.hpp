@@ -89,8 +89,20 @@ const UINT16 WGS84_i =				4979;		// LatLonEht ensemble
 const UINT16 WGS84_i_xyz =			4978;		// XYZ ensemble
 const UINT16 WGS84_ensemble_i =		6326;		// WGS84 ensemble
 
-const UINT16 NAD83_CSRS_i = 	4955; //LatLonEht
-const UINT16 NAD83_CSRS_i_xyz = 4954; // XYZ
+const UINT16 NAD83_CSRS_i = 		4955; //LatLonEht ensemble
+const UINT16 NAD83_CSRS_i_xyz =		4954; // XYZ ensemble
+const UINT16 NAD83_CSRS_V2_i =		8235; //LatLonEht
+const UINT16 NAD83_CSRS_V2_i_xyz =	8233; // XYZ
+const UINT16 NAD83_CSRS_V3_i =		8239; //LatLonEht
+const UINT16 NAD83_CSRS_V3_i_xyz =	8238; // XYZ
+const UINT16 NAD83_CSRS_V4_i =		8244; //LatLonEht
+const UINT16 NAD83_CSRS_V4_i_xyz =	8242; // XYZ
+const UINT16 NAD83_CSRS_V5_i =		8248; //LatLonEht
+const UINT16 NAD83_CSRS_V5_i_xyz =	8247; // XYZ
+const UINT16 NAD83_CSRS_V6_i =		8251; //LatLonEht
+const UINT16 NAD83_CSRS_V6_i_xyz =	8250; // XYZ
+const UINT16 NAD83_CSRS_V7_i =		8254; //LatLonEht
+const UINT16 NAD83_CSRS_V7_i_xyz =	8253; // XYZ
 
 
 const char* const AGD66_c =			"4202";
@@ -131,6 +143,12 @@ const char* const WGS84_G2139_c =	"9753";
 
 // epsg strings for NAD83 provide XYZ definition only
 const char* const NAD83_CSRS_c =	"4954";
+const char* const NAD83_CSRS_v2_c = "8233";
+const char* const NAD83_CSRS_v3_c = "8238";
+const char* const NAD83_CSRS_v4_c = "8242";
+const char* const NAD83_CSRS_v5_c = "8247";
+const char* const NAD83_CSRS_v6_c = "8250";
+const char* const NAD83_CSRS_v7_c = "8253";
 
 
 const char* const AGD66_epoch =		"1.1.1966";
@@ -164,6 +182,12 @@ const char* const WGS84_G1762_epoch =	"16.10.2013";
 const char* const WGS84_G2139_epoch =	"03.01.2021";
 
 const char* const NAD83_CSRS_epoch = "01.01.2010";
+const char* const NAD83_CSRS_V2_epoch = "01.01.1997";
+const char* const NAD83_CSRS_V3_epoch = "01.01.1997";
+const char* const NAD83_CSRS_V4_epoch = "01.01.2002";
+const char* const NAD83_CSRS_V5_epoch = "01.01.2006";
+const char* const NAD83_CSRS_V6_epoch = "01.01.2010";
+const char* const NAD83_CSRS_V7_epoch = "01.01.2010";
 
 const char* const AGD66_s =			"AGD66";
 const char* const AGD84_s =			"AGD84";
@@ -214,9 +238,40 @@ const char* const WGS84_G2139_s =			"WGS84 (G2139)";
 const char* const WGS84_G2139_alias_s =		"WGS 84 (G2139)";
 
 // NAD83(CSRS)
-const char* const NAD83_CSRS_s =			"NAD83 (CSRS)";
-const char* const NAD83_CSRS_alias_s = 		"NAD 83 (CSRS)";
-const char* const NAD83_CSRS_brief_s =		"NAD83";
-const char* const NAD83_CSRS_brief_alias_s ="NAD83(CSRS)";
+const char* const NAD83_CSRS_s =			"NAD83(CSRS)";
+const char* const NAD83_CSRS_alias_s =		"NAD83 (CSRS)";
+
+const char* const NAD83_CSRS_V2_s =			"NAD83(CSRS)v2";
+const char* const NAD83_CSRS_V2_alias1_s =	"NAD83 (CSRS) v2";
+const char* const NAD83_CSRS_V2_alias2_s =	"NAD83(CSRS)V2";
+const char* const NAD83_CSRS_V2_alias3_s =	"NAD83 (CSRS) V2";
+
+const char* const NAD83_CSRS_V3_s =			"NAD83(CSRS)v3";
+const char* const NAD83_CSRS_V3_alias1_s =	"NAD83 (CSRS) v3";
+const char* const NAD83_CSRS_V3_alias2_s =	"NAD83(CSRS)V3";
+const char* const NAD83_CSRS_V3_alias3_s =	"NAD83 (CSRS) V3";
+
+const char* const NAD83_CSRS_V4_s =			"NAD83(CSRS)v4";
+const char* const NAD83_CSRS_V4_alias1_s =	"NAD83 (CSRS) v4";
+const char* const NAD83_CSRS_V4_alias2_s =	"NAD83(CSRS)V4";
+const char* const NAD83_CSRS_V4_alias3_s =	"NAD83 (CSRS) V4";
+
+const char* const NAD83_CSRS_V5_s =			"NAD83(CSRS)v5";
+const char* const NAD83_CSRS_V5_alias1_s =	"NAD83 (CSRS) v5";
+const char* const NAD83_CSRS_V5_alias2_s =	"NAD83(CSRS)V5";
+const char* const NAD83_CSRS_V5_alias3_s =	"NAD83 (CSRS) V5";
+
+const char* const NAD83_CSRS_V6_s =			"NAD83(CSRS)v6";
+const char* const NAD83_CSRS_V6_alias1_s =	"NAD83 (CSRS) v6";
+const char* const NAD83_CSRS_V6_alias2_s =	"NAD83(CSRS)V6";
+const char* const NAD83_CSRS_V6_alias3_s =	"NAD83 (CSRS) V6";
+
+const char* const NAD83_CSRS_V7_s = 		"NAD83(CSRS)v7";
+const char* const NAD83_CSRS_V7_alias1_s =	"NAD83 (CSRS) v7";
+const char* const NAD83_CSRS_V7_alias2_s =	"NAD83(CSRS)V7";
+const char* const NAD83_CSRS_V7_alias3_s =	"NAD83 (CSRS) V7";
+
+
+
 
 #endif  // DNACONSTS_DATUMS_HPP
