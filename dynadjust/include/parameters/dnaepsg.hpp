@@ -2,6 +2,7 @@
 // Name         : dnaepsg.hpp
 // Author       : Roger Fraser
 // Contributors : Dale Roberts <dale.o.roberts@gmail.com>
+//				: Mike Bremner 
 // Copyright    : Copyright 2017-2025 Geoscience Australia
 //
 //                Licensed under the Apache License, Version 2.0 (the "License");
@@ -212,6 +213,11 @@ U epsgCodeFromName(const S& datumName)
 		iequals(datumName, NAD83_CSRS_V7_alias2_s) ||
 		iequals(datumName, NAD83_CSRS_V7_alias3_s))
 		return NAD83_CSRS_V7_i_xyz;
+    if (iequals(datumName, NAD83_CSRS_V8_s) || 
+		iequals(datumName, NAD83_CSRS_V8_alias1_s) ||
+        iequals(datumName, NAD83_CSRS_V8_alias2_s) || 
+		iequals(datumName, NAD83_CSRS_V8_alias3_s))
+        return NAD83_CSRS_V8_i_xyz;
 
     std::stringstream ss;
     ss << "  epsgCodeFromName: '" << datumName << "' is not a supported reference frame label." << std::endl;
@@ -377,6 +383,8 @@ bool isEpsgDatumStatic(const U& epsgCode)
 	case NAD83_CSRS_V6_i_xyz:
 	case NAD83_CSRS_V7_i:
 	case NAD83_CSRS_V7_i_xyz:
+    case NAD83_CSRS_V8_i:
+    case NAD83_CSRS_V8_i_xyz:
 		return true;
 	// ITRF....
 	case ITRF1988_i_xyz:
@@ -503,6 +511,8 @@ void spheroidFromEpsgCode(const U& epsgCode, epsg_spheroid& ellipsoid)
 	case NAD83_CSRS_V6_i:
 	case NAD83_CSRS_V7_i_xyz:
 	case NAD83_CSRS_V7_i:
+    case NAD83_CSRS_V8_i_xyz:
+    case NAD83_CSRS_V8_i:
 		// authority
 		ellipsoid.authority_.first = "EPSG";
 		ellipsoid.authority_.second = "7019";
@@ -654,6 +664,9 @@ std::string referenceepochFromEpsgCode(const U& epsgCode)
 	case NAD83_CSRS_V7_i_xyz:
 	case NAD83_CSRS_V7_i:
 		return NAD83_CSRS_V7_epoch;
+    case NAD83_CSRS_V8_i_xyz:
+    case NAD83_CSRS_V8_i: 
+		return NAD83_CSRS_V8_epoch;
 	default:
 		std::stringstream ss;
 		ss << "  referenceepochFromEpsgCode: EPSG code '" << epsgCode << "' is not a supported EPSG code." << std::endl;
@@ -780,6 +793,9 @@ S datumFromEpsgCode(const U& epsgCode)
 	case NAD83_CSRS_V7_i_xyz:
 	case NAD83_CSRS_V7_i:
 		return NAD83_CSRS_V7_s;
+    case NAD83_CSRS_V8_i_xyz:
+    case NAD83_CSRS_V8_i: 
+		return NAD83_CSRS_V8_s;
 	default:
 		std::stringstream ss;
 		ss << "  datumFromEpsgCode: EPSG code '" << epsgCode << "' is not a supported EPSG code." << std::endl;
@@ -887,6 +903,8 @@ bool validateEpsgCode(const U& epsgCode)
 	case NAD83_CSRS_V6_i:
 	case NAD83_CSRS_V7_i_xyz:
 	case NAD83_CSRS_V7_i:
+    case NAD83_CSRS_V8_i_xyz:
+    case NAD83_CSRS_V8_i:
 		return true;
 	default:
 		std::stringstream ss;

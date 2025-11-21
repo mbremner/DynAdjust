@@ -102,6 +102,9 @@ const UINT16 NAD83_CSRS_V6_i =		8251; //LatLonEht
 const UINT16 NAD83_CSRS_V6_i_xyz =	8250; // XYZ
 const UINT16 NAD83_CSRS_V7_i =		8254; //LatLonEht
 const UINT16 NAD83_CSRS_V7_i_xyz =	8253; // XYZ
+const UINT16 NAD83_CSRS_V8_i =     10413; // LatLonEht
+const UINT16 NAD83_CSRS_V8_i_xyz = 10412;  // XYZ
+
 
 
 const char* const AGD66_c =			"4202";
@@ -186,6 +189,7 @@ const char* const NAD83_CSRS_V4_epoch = "01.01.2002";
 const char* const NAD83_CSRS_V5_epoch = "01.01.2006";
 const char* const NAD83_CSRS_V6_epoch = "01.01.2010";
 const char* const NAD83_CSRS_V7_epoch = "01.01.2010";
+const char* const NAD83_CSRS_V8_epoch = "01.01.2010";
 
 const char* const AGD66_s =			"AGD66";
 const char* const AGD84_s =			"AGD84";
@@ -269,7 +273,10 @@ const char* const NAD83_CSRS_V7_alias1_s =	"NAD83 (CSRS) v7";
 const char* const NAD83_CSRS_V7_alias2_s =	"NAD83(CSRS)V7";
 const char* const NAD83_CSRS_V7_alias3_s =	"NAD83 (CSRS) V7";
 
-
+const char* const NAD83_CSRS_V8_s =        "NAD83(CSRS)v8";
+const char* const NAD83_CSRS_V8_alias1_s = "NAD83 (CSRS) v8";
+const char* const NAD83_CSRS_V8_alias2_s = "NAD83(CSRS)V8";
+const char* const NAD83_CSRS_V8_alias3_s = "NAD83 (CSRS) V8";
 
 
 #endif  // DNACONSTS_DATUMS_HPP
