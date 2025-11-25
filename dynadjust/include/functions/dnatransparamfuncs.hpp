@@ -472,11 +472,11 @@ void determineITRF1988Parameters(transformation_parameter_set& tParam)
 	case NAD83_CSRS_V7_i:
     case NAD83_CSRS_V8_i_xyz:
     case NAD83_CSRS_V8_i:
-		memcpy(&tparam.parameters_, nad83_itrf1988<double, uint32>::transformationparameters, sizeof(double) * 14);
-		tparam.reference_epoch_ = nad83_itrf1988<double, uint32>::reference_epoch;
-		tparam.reference_frame_ = nad83_itrf1988<double, uint32>::reference_frame;
-		tparam.paramdirection_ = __paramreverse__;
-		tparam.reverse();
+		memcpy(&tParam.parameters_, NAD83_ITRF1988<double, UINT32>::transformationParameters, sizeof(double) * 14);
+        tParam.reference_epoch_ = NAD83_ITRF1988<double, UINT32>::reference_epoch;
+        tParam.reference_frame_ = NAD83_ITRF1988<double, UINT32>::reference_frame;
+		tParam.paramDirection_ = __paramReverse__;
+		tParam.reverse();
 		break;
 	// ITRF1988-to-WGS84
 	case WGS84_i_xyz:
@@ -2568,7 +2568,7 @@ void determineNAD83Parameters(transformation_parameter_set& tParam)
 	case WGS84_G2139_i_xyz:
 	case WGS84_G2139_i:
 	default:
-		throw boost::enable_current_exception(runtime_error("determineNAD83Parameters(): "));
+        throw std::runtime_error("determineNAD83Parameters(): ");
 	}
 }
 

@@ -338,6 +338,9 @@ S epsgStringFromName(const S& datumName)
 	case NAD83_CSRS_V7_i:
 	case NAD83_CSRS_V7_i_xyz:
 		return NAD83_CSRS_v7_c;
+    case NAD83_CSRS_V8_i:
+    case NAD83_CSRS_V8_i_xyz: 
+		return NAD83_CSRS_v8_c;
 	}
 
 	std::stringstream ss;

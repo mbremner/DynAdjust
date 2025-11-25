@@ -2,6 +2,7 @@
 // Name         : dnaconsts-datums.hpp
 // Author       : Roger Fraser
 // Contributors : Dale Roberts <dale.o.roberts@gmail.com>
+//				: Mike Bremner
 // Copyright    : Copyright 2017-2025 Geoscience Australia
 //
 //                Licensed under the Apache License, Version 2.0 (the "License");
@@ -133,24 +134,25 @@ const char* const ITRF1989_c =		"4911";
 const char* const ITRF1988_c =		"4910";
 
 // epsg strings for WGS84 provide XYZ definition only
-const char* const WGS84_c =			"4978";
+const char* const WGS84_c =			 "4978";
 const char* const WGS84_ensemble_c = "6326";
-const char* const WGS84_transit_c = "7815";
-const char* const WGS84_G730_c =	"7656";
-const char* const WGS84_G873_c =	"7658";
-const char* const WGS84_G1150_c =	"7660";
-const char* const WGS84_G1674_c =	"7662";
-const char* const WGS84_G1762_c =	"7664";
-const char* const WGS84_G2139_c =	"9753";
+const char* const WGS84_transit_c =  "7815";
+const char* const WGS84_G730_c =	 "7656";
+const char* const WGS84_G873_c =	 "7658";
+const char* const WGS84_G1150_c =	 "7660";
+const char* const WGS84_G1674_c =	 "7662";
+const char* const WGS84_G1762_c =	 "7664";
+const char* const WGS84_G2139_c =	 "9753";
 
 // epsg strings for NAD83 provide XYZ definition only
-const char* const NAD83_CSRS_c =	"4954";
-const char* const NAD83_CSRS_v2_c = "8233";
-const char* const NAD83_CSRS_v3_c = "8238";
-const char* const NAD83_CSRS_v4_c = "8242";
-const char* const NAD83_CSRS_v5_c = "8247";
-const char* const NAD83_CSRS_v6_c = "8250";
-const char* const NAD83_CSRS_v7_c = "8253";
+const char* const NAD83_CSRS_c =	 "4954";
+const char* const NAD83_CSRS_v2_c =  "8233";
+const char* const NAD83_CSRS_v3_c =  "8238";
+const char* const NAD83_CSRS_v4_c =  "8242";
+const char* const NAD83_CSRS_v5_c =  "8247";
+const char* const NAD83_CSRS_v6_c =  "8250";
+const char* const NAD83_CSRS_v7_c =  "8253";
+const char* const NAD83_CSRS_v8_c = "10412";
 
 const char* const AGD66_epoch =		"01.01.1966";
 const char* const AGD84_epoch =		"01.01.1984";
@@ -182,7 +184,7 @@ const char* const WGS84_G1674_epoch =	"07.05.2012";
 const char* const WGS84_G1762_epoch =	"16.10.2013";
 const char* const WGS84_G2139_epoch =	"03.01.2021";
 
-const char* const NAD83_CSRS_epoch = "01.01.2010";
+const char* const NAD83_CSRS_epoch =    "01.01.2010";
 const char* const NAD83_CSRS_V2_epoch = "01.01.1997";
 const char* const NAD83_CSRS_V3_epoch = "01.01.1997";
 const char* const NAD83_CSRS_V4_epoch = "01.01.2002";
