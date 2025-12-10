@@ -1301,8 +1301,6 @@ double dna_reftran::DetermineElapsedTime(const CDnaDatum& datumFrom, const CDnaD
 			break;
 
 		case __static_to_dynamic__:
-            // MBremner - Static to Dynamic may need to be reverse of Dynamic to Static
-
 		case __dynamic_to_static__:
 		
 			if (transParams.paramDirection_ == __paramForward__)
