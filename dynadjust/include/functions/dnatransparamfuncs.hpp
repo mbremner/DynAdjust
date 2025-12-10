@@ -2448,7 +2448,7 @@ void determineNAD83Parameters(transformation_parameter_set& tParam)
 	case GDA94_i_2d:
 	case GDA94_i:
 		// No direct parameters exist!
-		throw RefTranException(message_parameters_undefined<string, UINT32>(tParam.from_to_.first, tParam.from_to_.second),
+		throw RefTranException(message_parameters_undefined<std::string, UINT32>(tParam.from_to_.first, tParam.from_to_.second),
 			REFTRAN_DIRECT_PARAMS_UNAVAILABLE);
 		break;
 	//////////////////////////////////
